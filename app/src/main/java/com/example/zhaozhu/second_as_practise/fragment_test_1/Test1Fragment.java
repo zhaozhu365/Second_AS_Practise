@@ -35,7 +35,7 @@ public class Test1Fragment extends MBaseFragment {
 
     @Override
     public String getFragmentDesc() {
-        return Test1Fragment.class.getSimpleName() + ", 仅供测试,实际框架中的使用方法见Test2Fragment.";
+        return Test1Fragment.class.getSimpleName() + ", 仅供测试,实际框架中的使用方法,参考yangzc";
     }
 
 

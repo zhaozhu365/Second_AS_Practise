@@ -38,6 +38,7 @@ public class MainFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
 
@@ -62,7 +63,13 @@ public class MainFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         //添加item
         mFragmentList = new ArrayList<>();
-        mFragmentList.add(new Test1Fragment());
+
+        //TODO start 在此添加测试页面
+        mFragmentList.add(new Test1Fragment());//测试1
+        
+
+        //TODO end
+
         MyAdapter myAdapter = new MyAdapter(getActivity(), mFragmentList);
         mMainListview.setAdapter(myAdapter);
     }
