@@ -31,7 +31,7 @@ public class View01 extends View {
     private View mView;
 
     /**
-     * 1,初识ViewRoot 和 DectoView
+     * 1,初识ViewRoot 和 DecorView
      *
      */
 

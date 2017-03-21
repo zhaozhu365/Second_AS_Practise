@@ -47,6 +47,11 @@ public class View03 extends View {
 
     /**
      * <pre>
+     * 3,draw过程,View的绘制过程遵循如下几步：
+     *  (1)绘制背景 background.draw(canvas)
+     *  (2)绘制自己 (onDraw)
+     *  (3)绘制children (dispatchDraw)
+     *  (4)绘制装饰 (onDrawScrollBars)
      * </pre>
      */
 

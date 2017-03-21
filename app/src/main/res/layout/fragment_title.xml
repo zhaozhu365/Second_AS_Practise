@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_corner_3_44cdfc">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_corner_3_44cdfc">
 
     <ImageView
         android:id="@+id/id_title_left_btn"
@@ -10,7 +10,7 @@
         android:layout_height="30dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="3dp"
-        android:src="@drawable/icon_circle"/>
+        android:src="@drawable/icon_circle" />
 
     <TextView
         android:id="@+id/id_title"
@@ -20,6 +20,6 @@
         android:text="title_fragment"
         android:textColor="#fff"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>
