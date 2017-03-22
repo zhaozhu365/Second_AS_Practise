@@ -13,10 +13,13 @@ import com.example.zhaozhu.second_as_practise.App;
 
 public class ReviewListView {
 
-    ListView mListView = new ListView(App.getAppContext());
+    ListView mListView;
 
-    {
+    private void init() {
+        mListView = new ListView(App.getAppContext());
+
         View view = new View(App.getAppContext());
+
         mListView.addHeaderView(view);
         mListView.removeHeaderView(view);
         mListView.getHeaderViewsCount();
@@ -30,10 +33,9 @@ public class ReviewListView {
         mListView.setAdapter(new MAdapter());
 
         //TODO mListView的复用机制
-
     }
 
-    public static class MAdapter extends BaseAdapter {
+    public class MAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
