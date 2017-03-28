@@ -18,10 +18,12 @@ import com.example.zhaozhu.second_as_practise.App;
 
 public class ReviewViewPager extends Fragment {
 
-    ViewPager mViewPager = new ViewPager(App.getAppContext());
+    ViewPager mViewPager;
 
-    {
-        mViewPager.setOffscreenPageLimit(3);
+    private void init() {
+        mViewPager = new ViewPager(App.getAppContext());
+
+        mViewPager.setOffscreenPageLimit(3);//TODO 还没弄仔细看这个
         mViewPager.setCurrentItem(0);
         mViewPager.addOnPageChangeListener(mOnPageChangeListener);//TODO 还没弄仔细看这俩
         mViewPager.addOnAdapterChangeListener(mOnAdapterChangeListener);//TODO
@@ -29,10 +31,9 @@ public class ReviewViewPager extends Fragment {
         mViewPager.setAdapter(new MPagerAdapter());
         mViewPager.setAdapter(new MFragmentAdapter(getChildFragmentManager()));
         mViewPager.setAdapter(new MFragmentStateAdapter(getChildFragmentManager()));
-
     }
 
-    public static class MPagerAdapter extends PagerAdapter {
+    public class MPagerAdapter extends PagerAdapter {
 
         @Override
         public int getCount() {
@@ -45,7 +46,7 @@ public class ReviewViewPager extends Fragment {
         }
     }
 
-    public static class MFragmentAdapter extends FragmentPagerAdapter {
+    public class MFragmentAdapter extends FragmentPagerAdapter {
 
         public MFragmentAdapter(FragmentManager fm) {
             super(fm);
@@ -62,7 +63,7 @@ public class ReviewViewPager extends Fragment {
         }
     }
 
-    public static class MFragmentStateAdapter extends FragmentStatePagerAdapter {
+    public class MFragmentStateAdapter extends FragmentStatePagerAdapter {
 
         public MFragmentStateAdapter(FragmentManager fm) {
             super(fm);
@@ -79,7 +80,7 @@ public class ReviewViewPager extends Fragment {
         }
     }
 
-    static ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
+    private ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -96,9 +97,11 @@ public class ReviewViewPager extends Fragment {
         }
     };
 
-    static ViewPager.OnAdapterChangeListener mOnAdapterChangeListener = new ViewPager.OnAdapterChangeListener() {
+    private ViewPager.OnAdapterChangeListener mOnAdapterChangeListener = new ViewPager.OnAdapterChangeListener() {
         @Override
-        public void onAdapterChanged(@NonNull ViewPager viewPager, @Nullable PagerAdapter oldAdapter, @Nullable PagerAdapter newAdapter) {
+        public void onAdapterChanged(@NonNull ViewPager viewPager,
+                                     @Nullable PagerAdapter oldAdapter,
+                                     @Nullable PagerAdapter newAdapter) {
 
         }
     };
