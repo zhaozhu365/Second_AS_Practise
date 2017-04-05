@@ -32,7 +32,7 @@ public class ReviewPath {
     }
 
     //Path方法简介
-    private void commonMethods() {
+    private void w() {
         //http://blog.csdn.net/abcdef314159/article/details/52797274
         initDefualt();
 

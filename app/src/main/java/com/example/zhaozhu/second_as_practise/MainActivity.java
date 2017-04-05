@@ -63,6 +63,7 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         //管理Fragment回退栈
         FragmentManager fm = getFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
         if (fm.getBackStackEntryCount() > 0) {
             fm.popBackStack();
         } else {

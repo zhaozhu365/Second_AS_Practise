@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ZView">
+        <attr name="color" format="color" />
+        <attr name="gravity" format="enum">
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+            <enum name="center" value="17" />
+        </attr>
+        <attr name="tag_layout" format="integer" />
+    </declare-styleable>
+
+</resources>

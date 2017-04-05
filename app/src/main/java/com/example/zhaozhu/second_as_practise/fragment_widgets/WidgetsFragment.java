@@ -58,6 +58,7 @@ public class WidgetsFragment extends MBaseFragment {
         mList.add(new DashLineFragment());
         mList.add(new BubblesFragment());
         mList.add(new CircleProgressBarFragment());
+        mList.add(new FlowLayoutFragment());
         //end
 
         mAdapter.setItems(mList);

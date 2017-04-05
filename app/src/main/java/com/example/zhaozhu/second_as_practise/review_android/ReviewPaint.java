@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.PathEffect;
+import android.graphics.Rect;
 import android.graphics.Typeface;
 
 /**
@@ -57,6 +58,14 @@ public class ReviewPaint {
         PathEffect pathEffect = new DashPathEffect(new float[]{16, 4}, 0);
         //----设置特殊path
         mPaint.setPathEffect(pathEffect);
+
+        //获取文本的宽高
+        String txt = "abc";
+        Rect bounds = new Rect();
+        mPaint.getTextBounds(txt, 0, txt.length(), bounds);
+        float txtWidth = bounds.width();
+        float txtHeight = bounds.height();
+
     }
 
 }

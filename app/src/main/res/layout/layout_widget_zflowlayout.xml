@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.example.zhaozhu.second_as_practise.review_android.ZFlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="Welcome"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="IT工程师"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="我真是可以的"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="你觉得呢"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="不要只知道挣钱"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="努力ing"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="I thick i can"
+            android:textColor="#43BBE7" />
+
+    </com.example.zhaozhu.second_as_practise.review_android.ZFlowLayout>
+
+</LinearLayout>
