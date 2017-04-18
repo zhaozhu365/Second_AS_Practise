@@ -77,6 +77,8 @@ public class Test1Fragment extends MBaseFragment {
 
             switch (v.getId()) {
                 case R.id.home_fragment: {
+                    //TODO 这种做法效率太低，需要优化
+                    //TODO 用sparseArray + ViewPager + tab 方式优化
                     if (mHomeFragment == null) {
                         mHomeFragment = new ContentFragment();
                     }
@@ -90,6 +92,7 @@ public class Test1Fragment extends MBaseFragment {
                     }
                     // 使用当前Fragment的布局替代id_content的控件
                     transaction.replace(R.id.id_fragment_content, mFriendFragment);
+                    //transaction.addToBackStack(null);
                     break;
                 }
             }
