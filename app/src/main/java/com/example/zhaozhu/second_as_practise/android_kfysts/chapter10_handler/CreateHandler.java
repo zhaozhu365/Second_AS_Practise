@@ -14,6 +14,7 @@ public class CreateHandler {
     private Handler mHandler;
     public void init() {
         HandlerThread handlerThread = new HandlerThread("zz_handler_thread");
+        handlerThread.start();//TODO 注意HandlerThread一定要先start
         Looper looper = handlerThread.getLooper();
         mHandler = new Handler(looper);
         //mHandler.post();
