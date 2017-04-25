@@ -47,6 +47,7 @@ public class View03 extends View {
     /**
      * <pre>
      * 1,使用Scroller
+     * 注意："实现view内容的弹性滑动",注意,是view的内容,为啥？因为view.scrollTo()方法就是对view内容的滑动
      *
      * scroller.startScroll()
      * scroller.computeScrollOffset()
@@ -60,7 +61,9 @@ public class View03 extends View {
      * 2,通过动画ValueAnimator
      * (1)普通的属性动画,ObjectAnimator
      *
-     * (2) "实现view内容的弹性滑动",注意,是view的内容
+     * (2)可以通过ObjectAnimator来实现被view的滑动(注意不是view的内容)
+     *
+     * (3)也可以利用属性动画来实现view.scrollTo()对view内容的滑动(注意,是view的内容)
      * </pre>
      */
 

@@ -50,9 +50,9 @@ public class View01 extends View {
         /** test MotionEvent */
         int action = event.getAction();
         action = MotionEvent.ACTION_DOWN;
-        action = MotionEvent.ACTION_UP;
         action = MotionEvent.ACTION_MOVE;
         action = MotionEvent.ACTION_CANCEL;
+        action = MotionEvent.ACTION_UP;
 
         /** test TouchSlop 系统所能识别出的被认为是滑动的最小距离的标准 */
         ViewConfiguration.get(getContext()).getScaledTouchSlop();
@@ -67,37 +67,38 @@ public class View01 extends View {
         velocityTracker.recycle();
 
         /** test GestureDetector 手势检测 */
-        GestureDetector mGestureDetector = new GestureDetector(new GestureDetector.OnGestureListener() {
-            @Override
-            public boolean onDown(MotionEvent e) {
-                return false;
-            }
+        GestureDetector mGestureDetector = new GestureDetector(getContext(),
+                new GestureDetector.OnGestureListener() {
+                    @Override
+                    public boolean onDown(MotionEvent e) {
+                        return false;
+                    }
 
-            @Override
-            public void onShowPress(MotionEvent e) {
+                    @Override
+                    public void onShowPress(MotionEvent e) {
 
-            }
+                    }
 
-            @Override
-            public boolean onSingleTapUp(MotionEvent e) {
-                return false;
-            }
+                    @Override
+                    public boolean onSingleTapUp(MotionEvent e) {
+                        return false;
+                    }
 
-            @Override
-            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-                return false;
-            }
+                    @Override
+                    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+                        return false;
+                    }
 
-            @Override
-            public void onLongPress(MotionEvent e) {
+                    @Override
+                    public void onLongPress(MotionEvent e) {
 
-            }
+                    }
 
-            @Override
-            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                return false;
-            }
-        });
+                    @Override
+                    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                        return false;
+                    }
+                });
 
         //解决长按屏幕后无法拖动的现象
         mGestureDetector.setIsLongpressEnabled(false);
@@ -125,9 +126,14 @@ public class View01 extends View {
 
     }
 
-    /** test Scroller 弹性滑动对象 ,需要和View的computeScroll() 方法配合来实现平滑滚动 */
+    /**
+     * test Scroller 弹性滑动对象 ,需要和View的computeScroll() 方法配合来实现平滑滚动
+     */
     Scroller mScroller = new Scroller(getContext());
-    /** 缓慢滚动到指定位置 */
+
+    /**
+     * 缓慢滚动到指定位置
+     */
     private void smoothScrollTo(int destX, int destY) {
         int scroolX = getScrollX();
         int deltaX = destX - scroolX;

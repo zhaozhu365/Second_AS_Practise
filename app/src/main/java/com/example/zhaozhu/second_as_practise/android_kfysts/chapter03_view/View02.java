@@ -86,7 +86,7 @@ public class View02 extends View {
     /**
      * <pre>
      * 以上3种实现方式的差异对比:
-     * 1,scrollTo/scrollBy:操作简单,适合对View内容的滑动
+     * 1,scrollTo/scrollBy:操作简单, 适合对(View内容的滑动)
      * 2,动画:操作简单,主要适用于没有交互的View和实现复杂的动画效果
      * 3,改变布局参数:操作稍微复杂,适用于有交互的View
      *
