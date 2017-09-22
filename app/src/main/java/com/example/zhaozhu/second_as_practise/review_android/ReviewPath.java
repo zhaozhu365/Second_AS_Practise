@@ -86,6 +86,8 @@ public class ReviewPath {
         mPath.addRoundRect(rectF, 50, 100, Path.Direction.CW);//增加圆角矩形,50,100表示4个角的x,y方向的弧度相同x方向弧度为50,y方向的弧度为100
         mPath.addRoundRect(rectF, new float[]{20, 20, 40, 40,
                 80, 80, 20, 100}, Path.Direction.CW);//增加圆角矩形,表示按照cw的方向,4个角每个角的弧度为20,20,40,40以此类推
+        //new float[]{20, 20, 40, 40, 80, 80, 20, 100}
+        //按照顺时针,数组中所代表的含义:左上角20,20; 右上角40,40; 右下角80,80; 左下角20,100
 
         Matrix matrix = new Matrix();
         matrix.postTranslate(200, 300);

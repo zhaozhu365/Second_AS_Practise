@@ -77,11 +77,11 @@ public class ReviewCanvas {
 //        mCanvas.drawVertices(Canvas.VertexMode.TRIANGLE_FAN, 1, );
 //        mCanvas.drawBitmapMesh(mBitmap, );
 
-        //画布剪裁  设置画布的显示区域
+        //TODO 难点:画布剪裁  设置画布的显示区域
         mCanvas.clipPath(mPath);
         mCanvas.clipRect(mRect);
 
-        //画布快照  依次为 保存当前状态、 回滚到上一次保存的状态、 保存图层状态、 回滚到指定状态、 获取保存次数
+        //TODO 难点:画布快照  依次为 保存当前状态、 回滚到上一次保存的状态、 保存图层状态、 回滚到指定状态、 获取保存次数
         mCanvas.save();
         mCanvas.restore();
         mCanvas.saveLayer(mRectF, mPaint, Canvas.ALL_SAVE_FLAG);
@@ -92,10 +92,12 @@ public class ReviewCanvas {
         mCanvas.translate(100, 100);
         mCanvas.scale(0.5f, 0.5f);
         mCanvas.rotate(30.0f);
+        //TODO 难点:错切变换
         mCanvas.skew(30, 30);
 
         //Matrix(矩阵)  实际上画布的位移，缩放等操作的都是图像矩阵Matrix， 只不过Matrix比较难以理解和使用，故封装了一些常用的方法。
         mCanvas.getMatrix();
+        //TODO 难点:矩阵变换
         mCanvas.setMatrix(mMatrix);
         mCanvas.concat(mMatrix);
 
